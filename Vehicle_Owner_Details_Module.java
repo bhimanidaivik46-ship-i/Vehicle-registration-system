@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 class VehicleOwner {
 
-    private String ownerName;
-    private String address;
-    private String mobileNumber;
-    private String idProofNumber;
+    String ownerName;
+    String address;
+    String mobileNumber;
+    String idProofNumber;
 
     void setDetails(String name, String address,
                     String mobile, String idProof) {
@@ -112,7 +112,6 @@ class VehicleOwnerRun {
         System.out.println("\nEnter Vehicle Details:");
         V3.inputVehicle(sc);
 
-        int choice;
         do {
             System.out.println("\n--- Update Menu ---");
             System.out.println("1. Update Owner Address");
@@ -122,39 +121,49 @@ class VehicleOwnerRun {
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
 
-            choice = sc.nextInt();
+           int choice = sc.nextInt();
             sc.nextLine();
 
             switch (choice) {
                 case 1:
+                    {
                     o1.updateAddress(sc);
                     break;
+                    }
 
                 case 2:
+                    {
                     o1.changeMobile(sc);
                     break;
+                    }
 
                 case 3:
+                    {
                     V3.updateVehicle(sc);
                     break;
+                    }
 
                 case 4:
+                    {
                     System.out.println("\n--- Owner Details ---");
                     o1.displayOwner();
                     System.out.println("\n--- Vehicle Details ---");
                     V3.displayVehicle();
                     break;
+                    }
 
                 case 5:
+                    {
                     System.out.println("Exiting Program...");
                     break;
-
+                    }
                 default:
+                    {
                     System.out.println("Invalid Choice!");
-            }
+                    }
+                }
         } while (choice != 5);
-
-        sc.close();
     }
 }
+
 
