@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 class VehicleOwner {
 
-    private String ownerName;
-    private String address;
-    private String mobileNumber;
-    private String idProofNumber;
+     String ownerName;
+     String address;
+    String mobileNumber;
+     String idProofNumber;
 
     // Set owner details
     void setDetails(String name, String address,
@@ -83,3 +83,4 @@ class VehicleOwnerRun {
 
     }
 }
+
